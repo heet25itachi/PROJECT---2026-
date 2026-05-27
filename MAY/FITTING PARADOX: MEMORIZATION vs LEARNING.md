@@ -1,14 +1,4 @@
 # FITTING PARADOX: MEMORIZATION vs LEARNING
-## 1. Core Duality
-   At a Structural level, the difference lies in whether the brain (or an algorithm) encodes the **underlying principle** or the **noise** of single instance.
-
-   ### 1.1 Memorization (Overfitting)
-               Memorization is a "Lossless" storage of specific data points. While efficient for fixed facts (e.g., multiplication tables, API syntax), it fails when the input changes slightly.
-
-                           - Mechnacism = High-weighting of specific features that may be coincidental.
-                           - Trap = It creates a rigid cognitive map that breaks upon contact with reality's entropy.
-
-   ### 1.2 
 
 ## Challenge:-
             You Train a model on dataset. It achived 100% accuracy on that Data.
@@ -25,7 +15,16 @@
 ## Research Area:-            
             Bias-Variance Tradeoff
 
+## 1. Core Duality
+   At a Structural level, the difference lies in whether the brain (or an algorithm) encodes the **underlying principle** or the **noise** of single instance.
 
+   ### 1.1 Memorization (Overfitting)
+               Memorization is a "Lossless" storage of specific data points. While efficient for fixed facts (e.g., multiplication tables, API syntax), it fails when the input changes slightly.
+
+                           - Mechnacism = High-weighting of specific features that may be coincidental.
+                           - Trap = It creates a rigid cognitive map that breaks upon contact with reality's entropy.
+
+   ### 1.2 
 
 
 
