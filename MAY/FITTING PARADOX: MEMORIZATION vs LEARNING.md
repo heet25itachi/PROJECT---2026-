@@ -11,7 +11,7 @@
             If your goal is to minimize Error ($E = 0$), why do we intentionally punish a model to Achieving Zero Error ? Why do  Add "Regularization" (essentially Adding a Penalty or Noise), to make the model perform Worse on it's training data?
 
 # Research Area:-            
-            **Bias-Variance Tradeoff**
+            Bias-Variance Tradeoff
 
 
 
