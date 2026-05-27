@@ -6,8 +6,8 @@
 
 4. **The Auditor Engine (The Core Value):** Implement a validation framework based on Marcos Lopez de Prado's **Probability of Backtest OVerfitting (PBO) ** framework.
 
-    # Use **Combinatorial Purged Cross-Validation (CPCV)** to split the historical data into non-contiguous matrix sub-intervals.
+    - Use **Combinatorial Purged Cross-Validation (CPCV)** to split the historical data into non-contiguous matrix sub-intervals.
 
-    # Run the strategy parameters across these permutations to measure exactly how fast performance degrades when the sequence of market regime shifts slightly.
+    - Run the strategy parameters across these permutations to measure exactly how fast performance degrades when the sequence of market regime shifts slightly.
 
 5. **Regularization Layer:** Implement an information-theoretic penalty (like Akaike Information Creterion (AIC) or Bayesian Information Criterion (BIC)) directly into the strategy selection loop to penalty strategy configurations that use too many parameter rules.
