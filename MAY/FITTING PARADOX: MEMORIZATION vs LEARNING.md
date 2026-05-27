@@ -33,4 +33,40 @@ $$\mathbb{E}\left[(y - \hat{f}(x))^2\right] = \text{Bias}\left[\hat{f}(x)\right]
 1. **$\text{Bias}^2$ (Underfitting Regime):** $$\text{Bias}\left[\hat{f}(x)\right] = \mathbb{E}\left[\hat{f}(x)\right] - f(x)$$
    The Error introducted by overly simplistic structural assumptions. The model parameters lack the capacity to capture the underlying geometric topology of $f(x)$.
 
-2. **$\text{Variance}$ (Overfitting Regime):** $$\text{Var}\left[\hat{f}(x)\right] = \mathbb{E}\left[\left(\hat{f}(x))]$$
+2. **$\text{Variance}$ (Overfitting Regime):** $$\text{Var}\left[\hat{f}(x)\right] = \mathbb{E}\left[\left(\hat{f}(x) - \mathbb{E}\left[\hat{f}(x)\right]\right)^2\right]$$
+   The model's sensitivity to structural variations in the training sample. High variance indicates that changing a minimal subset of data points completely deforms the model's decision boundaries.
+
+3. **$\sigma^2$ (Irreductible Error):**
+   The inherent variance of the noise parameter $\epsilon$. This forms the absolute information-theoretic lower bound of prediction error. No optimization routine can breach this threshold.
+
+---
+
+## 3.  Structural Breakdown
+
+| System State | Training Error ($E_{\text{train}}$) | Generalization Error ($E_{\text{test}}$) | Model Capacity | System Characteristic 
+| :----------- | :-----------------------------------| :----------------------------------------| :--------------| :--------------------|
+| **High Bias** (Underfitting) | High | High | |Deficient | Misses structural signal completely.
+|
+| ** High Variance** (Overfitting) | $E_{\text{train}} \to 0$ | $E_{\text{test}} \to \infty$ | Excessive | Memorizes random noise variables ($\epsilon$). | 
+| **Optimal Regularization**
+| Low / Stable |
+$\min(E_{\text{test}})$ |
+Balanced | Generalizes
+underlying mathematical 
+function ($f(x)$).  |
+
+---
+
+## 4. The Regularization Mechanics 
+
+To prevent a high-capacity system from exploiting its parameters to memorize noise, we append and explicit geometric penalty directly to the loss minimization objective:
+
+$$\min_{w} \left\{\mathcal{L}(\mathcal{D}, w) + \lambda \mathcal{R}(w)\right\}$$
+
+Where:
+* $\mathcal{L}(\mathcal{D}, w)$ represents empirical training loss over dataset $\mathcal{D}$.
+* $\mathcal{D}$
+* $\mathcal{R}(w)$ is the regularization operator (e.g., $L_2$ norm constraint: $\|w\|_2^2 = \sum w_i^2$).
+* $\lambda$ is the scaling hyperparameter regulating the trade-off.
+
+By intentionally penalizing large parameter weights, regularization forces the decision surface to remain smooth, preventing it from wildly oscillating to hit noisy outliers. We do not punish a system for minimizing true error; we mathematically constrain it from cheating via rote memorization. 
