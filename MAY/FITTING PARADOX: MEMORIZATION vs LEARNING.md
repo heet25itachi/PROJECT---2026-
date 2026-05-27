@@ -59,7 +59,6 @@ $$\min_{w} \left\{\mathcal{L}(\mathcal{D}, w) + \lambda \mathcal{R}(w)\right\}$$
 
 Where:
 * $\mathcal{L}(\mathcal{D}, w)$ represents empirical training loss over dataset $\mathcal{D}$.
-* $\mathcal{D}$
 * $\mathcal{R}(w)$ is the regularization operator (e.g., $L_2$ norm constraint: $\|w\|_2^2 = \sum w_i^2$).
 * $\lambda$ is the scaling hyperparameter regulating the trade-off.
 
