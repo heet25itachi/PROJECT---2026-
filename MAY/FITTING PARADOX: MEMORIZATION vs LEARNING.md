@@ -24,7 +24,16 @@
                            - Mechnacism = High-weighting of specific features that may be coincidental.
                            - Trap = It creates a rigid cognitive map that breaks upon contact with reality's entropy.
 
-   ### 1.2 
+   ### 1.2 Learning (Generalization)
+               Learning is the extraction of a latent heuristic. It involves "Lossy" compression -- discarding the irrelevant specifics of an example to retain the "Rule" that governs all similar examples.
+
+                           - Mechanism = Recognizing patterns across disparate datasets.
+                           - Benefit = It allows for "Transfer Learning," where knowledge from one domain (e.g., Physics) can be applied to another (e.g., Finance).
+
+## The Overfitting Landscape
+ In Statistical modeling and deep learning, we visualize this paradox through the relationship between model complexity and error rates.
+
+            $$E_total = Bias^2 + Variance + Epsilon$$
 
 
 
