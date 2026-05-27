@@ -48,12 +48,7 @@ $$\mathbb{E}\left[(y - \hat{f}(x))^2\right] = \text{Bias}\left[\hat{f}(x)\right]
 | **High Bias** (Underfitting) | High | High | |Deficient | Misses structural signal completely.
 |
 | ** High Variance** (Overfitting) | $E_{\text{train}} \to 0$ | $E_{\text{test}} \to \infty$ | Excessive | Memorizes random noise variables ($\epsilon$). | 
-| **Optimal Regularization**
-| Low / Stable |
-$\min(E_{\text{test}})$ |
-Balanced | Generalizes
-underlying mathematical 
-function ($f(x)$).  |
+| **Optimal Regularization** | Low / Stable | $\min(E_{\text{test}})$ | Balanced | Generalizes underlying mathematical function ($f(x)$).  |
 
 ---
 
